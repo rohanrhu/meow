@@ -73,8 +73,14 @@ const startRecording = () => {
             filters: [{name: 'GIF', extensions: ['gif']}]
         });
 
-        if (save_path)
+        if (save_path) {
             fs.copyFileSync(temp_gif_path, save_path);
+            spawn('explorer.exe', ['/select,', save_path], {
+                detached: true,
+                stdio: ['ignore']
+            });
+        }
+
         fs.unlinkSync(temp_gif_path);
 
         recProc.kill('SIGTERM');
