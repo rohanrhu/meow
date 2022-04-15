@@ -3,7 +3,7 @@ Quick screen recorder to GIF.
 
 <img src="./assets/ss.gif" alt="Meowing..." />
 
-## Usasge
+## Usage
 Usage is simple. Just follow these steps:
 * Open Meow!
 * Click Meow! (Recording will be started and you will see a frame of recording area.)
