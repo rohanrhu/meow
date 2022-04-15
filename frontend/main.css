@@ -1,0 +1,67 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: transparent;
+    user-select: none;
+    font-family: Arial;
+}
+
+.Meow {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.Meow_windowMoveArea {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 40px;
+    -webkit-app-region: drag;
+    background: rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.Meow_frame {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 0, 179, 0.1);
+    border: 1px solid #ff00e0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Meow_frame_recordBtn {
+    background: #ff00e0;
+    color: white;
+    height: 40px;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+}
+
+.Meow_frame_recordBtn:hover {
+    border: 1px solid #ffbff8;
+}
+
+.Meow_frame_recordBtn:active {
+    background: #ff97f3;
+    border: 1px solid #5a0050;
+}

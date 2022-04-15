@@ -1,0 +1,10 @@
+* text=auto eol=lf
+
+bin linguist-vendored
+thirdparty linguist-vendored
+frontend/thirdparty linguist-vendored
+documentation linguist-vendored
+docs linguist-vendored
+
+*.html linguist-vendored
+*.css linguist-vendored

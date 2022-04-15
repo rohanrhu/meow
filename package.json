@@ -1,0 +1,53 @@
+{
+  "name": "meow",
+  "version": "0.1.0",
+  "description": "Quick screen recorder",
+  "main": "meow.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "dist": "electron-builder build --win nsis:x64"
+  },
+  "build": {
+      "productName": "Meow!",
+      "appId": "com.evrenselkisilik.meow",
+      "directories": {
+          "buildResources": "build"
+      },
+      "files": [
+      ],
+      "win": {
+          "asar": false,
+          "target": "nsis",
+          "icon": "assets/meow.ico"
+      },
+      "nsis": {
+        "installerIcon": "assets/meow.ico",
+        "installerHeaderIcon": "assets/meow.ico",
+        "deleteAppDataOnUninstall": true
+      }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohanrhu/meow.git"
+  },
+  "keywords": [
+    "screen",
+    "recorder",
+    "gif",
+    "screenshot",
+    "screen",
+    "recorder"
+  ],
+  "author": "Oğuzhan Eroğlu <rohanrhu2@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rohanrhu/meow/issues"
+  },
+  "homepage": "https://github.com/rohanrhu/meow#readme",
+  "devDependencies": {
+    "electron": "^18.0.4",
+    "electron-builder": "^23.0.3",
+    "electron-packager": "^15.4.0"
+  }
+}
