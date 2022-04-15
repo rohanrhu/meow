@@ -15,6 +15,7 @@
           "buildResources": "build"
       },
       "files": [
+        "!assets/ss.gif"
       ],
       "win": {
           "asar": false,
