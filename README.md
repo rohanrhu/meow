@@ -1,12 +1,7 @@
 # Meow!
 Quick screen recorder to GIF.
 
-<p style="text-align: center;">
-    <img src="./assets/meow.png" alt="Meow!" style="width: 200px;" />
-    <br>
-    <br>
-    <img src="./assets/ss.gif" alt="Meowing..." />
-</p>
+<img src="./assets/ss.gif" alt="Meowing..." />
 
 ## Usasge
 Usage is simple. Just follow these steps:
