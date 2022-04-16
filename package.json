@@ -15,7 +15,10 @@
           "buildResources": "build"
       },
       "files": [
-        "!assets/ss.gif"
+        "!assets/ss.gif",
+        "!meow.code-workspace",
+        "!assets/ss.gif",
+        "!.vscode"
       ],
       "win": {
           "asar": false,

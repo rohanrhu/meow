@@ -15,9 +15,8 @@ const { Component } = require('../Component.js');
 class Meow extends Component {
     /**
      * @param {HTMLElement} element
-     * @param {import("../Component.js").ComponentSingleEvents} testparam
      */
-    constructor(element, testparam) {
+    constructor(element) {
         super(element);
 
         this.elRecordBtn = this.element.getElementsByClassName('Meow_frame_recordBtn')[0];
