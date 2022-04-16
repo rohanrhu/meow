@@ -11,7 +11,7 @@
 const util = require('util');
 const path = require('path');
 const fs = require('fs');
-const { execFile, spawn, ChildProcess } = require('child_process');
+const { execFile, spawn, ChildProcess, spawnSync } = require('child_process');
 const { app, BrowserWindow, ipcMain, dialog } = require('electron');
 
 /** @type {BrowserWindow} */
@@ -44,11 +44,12 @@ const createWindow = () => {
 const startRecording = () => {
     console.log('startRecording()');
 
-    recProc = execFile(path.resolve(path.join(__dirname, 'bin/ffmpeg')), [
+    recProc = execFile(path.resolve(path.join(__dirname, 'bin/ffmpeg.exe')), [
+        '-y',
         '-f',
         'gdigrab',
         '-framerate',
-        '15',
+        '10',
         '-offset_x',
         win.getPosition()[0],
         '-offset_y',
@@ -60,14 +61,23 @@ const startRecording = () => {
         '-i',
         'desktop',
         '-filter_complex',
-        '[0:v] fps=15,split [a][b];[a] palettegen=stats_mode=single [p];[b][p] paletteuse=new=1',
-        temp_gif_path,
-        '-y'
+        '[0:v] fps=10,split [a][b];[a] palettegen=max_colors=20:reserve_transparent=0:stats_mode=single [p];[b][p] paletteuse=new=1',
+        temp_gif_path
     ]);
 
     is_recording = true;
 
     recProc.on('exit', (code, signal) => {
+        spawnSync(
+            path.resolve(path.join(__dirname, 'bin/gifsicle.exe')),
+            [
+                '-O3',
+                temp_gif_path,
+                '-o',
+                temp_gif_path
+            ]
+        );
+        
         const save_path = dialog.showSaveDialogSync(win, {
             title: 'Save GIF to',
             filters: [{name: 'GIF', extensions: ['gif']}]
