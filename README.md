@@ -3,6 +3,9 @@ Quick screen recorder to GIF.
 
 <img src="./assets/ss.gif" alt="Meowing..." />
 
+## Install
+Download [the latest version from here](https://github.com/rohanrhu/meow/releases/download/v0.2.0/Meow.Setup.0.2.0.exe) and install it, that's all.
+
 ## Usage
 Usage is simple. Just follow these steps:
 * Open Meow!
