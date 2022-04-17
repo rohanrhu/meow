@@ -1,6 +1,6 @@
 {
   "name": "meow",
-  "version": "0.2.1-git",
+  "version": "0.2.1",
   "description": "Quick screen recorder",
   "main": "meow.js",
   "scripts": {
